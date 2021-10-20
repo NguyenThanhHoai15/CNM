@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <a href="/">
+        <h1>Về trang chủ</h1>
+    </a>
+
+    <div class="company_info">
+        <img src=<%=data.hinhanh_company%> width=" 100%" height="150px" />
+        <div class="desc">
+            tên công ty: <%=data["ten_company"]%>
+        </div>
+    </div><br> <br>
+
+    <h1>Danh sách sản phẩm</h1>
+
+    <div class="subjects">
+        <% if(data.sanpham && data.sanpham.length) { %>
+            <div class="list_product">
+                <% for(let i=0; i < data.sanpham.length; i++) { %>
+                    <div class="gallery">
+                        <img src=<%=data.sanpham[i].img_sp%> alt="image" width="100%" height="150px"/>
+                        <h3>
+                            tên sản phẩm: <%=data.sanpham[i].ten_sp%>
+                        </h3>
+                    </div>
+                    <% } %>
+            </div>
+            <% } else { %>
+                <h3>Chưa cập nhật danh sách sản phẩm cho công ty này</h3>
+                <% } %>
+    </div>
+</body>
+
+</html>

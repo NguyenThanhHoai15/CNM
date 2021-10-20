@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <h1>Nhập Thông Tin Công ty</h1><br>
+    <div class="subjects">
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <!-- <label for="ma_sp">Mã sản phẩm:</label><br> -->
+            <input type="text" id="ma_company" name="ma_company" placeholder="Nhập id công ty">
+            <!-- <label for="ten_sp">Tên Sản Phẩm:</label><br> -->
+            <input type="text" id="ten_company" name="ten_company" placeholder="Nhập tên công ty">
+            <!-- <label for="soluong">Số lượng:</label><br> -->
+            <input type="text" id="hinhanh_company" name="hinhanh_company" placeholder="Nhập logo công ty">
+            <input type="submit" value="Thêm" style="padding: 5px;">
+        </form>
+    </div><br><br><br><br>
+
+    <div class="subjects">
+        <% for(let i=0; i < data.length; i++) { %>
+            <div class="gallery" style="width:20%;">
+                <a href="<%=data[i].ma_company%>">
+                    <img src=<%=data[i].hinhanh_company%> alt="image" width="100%" height="150px"/>
+                    <h3>
+                        tên công ty: <%=data[i]["ten_company"]%>
+                    </h3>
+                    <form action="/delete" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="ma_company" value="<%=data[i]['ma_company']%>" />
+                        <input type="submit" value="Xóa" />
+                    </form>
+                </a>
+            </div>
+            <% } %>
+    </div>
+</body>
+
+</html>

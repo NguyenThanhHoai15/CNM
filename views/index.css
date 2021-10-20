@@ -1,0 +1,54 @@
+h1 {
+    color: red;
+    text-align: center;
+}
+
+div.subjects{
+    display: flex; /*vùng chứa*/
+    flex-direction: row; /*hiển thị theo chiều ngang*/
+    flex-wrap: wrap; /*Chia thành nhiều dòng*/
+    justify-content: center; /*Căn chỉnh các mục ở tâm của flex*/
+    align-items: center;
+}
+
+form {
+    padding-left: 50px;
+}
+
+div.gallery{
+    background-color: navajowhite;
+    padding: 10px 10px 10px 10px;
+    float: left;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+h3 {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+div.company_info {
+    margin-left: auto;
+    margin-right:auto;
+    width: 20%;
+    background-color: darkslategrey;
+    padding: 10px 10px 10px 10px;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+table, th, td {
+    border:1px solid black;
+  }
+
+div.list_product{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
